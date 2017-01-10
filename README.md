@@ -1,6 +1,11 @@
 # Reusable time saving code snippets for everyone
 Please feel free to send this project some pull requests. 
 
-Next: <br />
+Up Next: <br />
+
+Python:
 Execute shell command from Python <br />
-JSON generation in Java using javax.json from glass fish
+Reading YAML file in Python <br />
+
+Java:
+JSON generation in Java using javax.json from glass fish <br />
