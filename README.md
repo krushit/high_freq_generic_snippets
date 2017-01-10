@@ -3,7 +3,7 @@ Please feel free to send this project some pull requests.
 
 Up Next: <br />
 
-Python:
+Python: <br />
 Execute shell command from Python <br />
 Reading YAML file in Python <br />
 
