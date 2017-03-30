@@ -1,18 +1,15 @@
 import java.io.*;
+import java.util.UUID;
 
 public class FileUtil {
 
     public static void main(String[] args) {
-        String path = "/Users/kagarwal/textFileWriter";
-        String data = "Data1\nData2\nData3";
-
-        FileUtil fw = new FileUtil();
-        fw.fileWrite(path,data);
-
-        System.out.println(fw.fileRead(path));
+        fileWrite("/Users/kagarwal/textFileWriter","Line1\nLine2\nLine3");
+        System.out.println(fileRead("/Users/kagarwal/textFileWriter"));
+        System.out.println(genUniqueFileName());
     }
 
-    public void fileWrite(String path, String data) {
+    public static void fileWrite(String path, String data) {
         File file = new File(path);
         try(Writer output = new BufferedWriter(new FileWriter(file))) {
             output.write(data);
@@ -22,7 +19,7 @@ public class FileUtil {
         }
     }
 
-    public String fileRead(String path) {
+    public static String fileRead(String path) {
 
         StringBuilder outputBuilder = new StringBuilder("");
 
@@ -39,5 +36,9 @@ public class FileUtil {
             System.out.println("Error reading from file...");
         }
         return outputBuilder.toString();
+    }
+
+    public static String genUniqueFileName() {
+        return UUID.randomUUID().toString();
     }
 }
