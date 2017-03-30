@@ -38,6 +38,6 @@ public class FileUtil {
         catch (IOException e) {
             System.out.println("Error reading from file...");
         }
-    return outputBuilder.toString();
+        return outputBuilder.toString();
     }
 }
